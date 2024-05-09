@@ -12,19 +12,24 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      let exercisesData = [];
-
-      if (bodyPart === 'all') {
-        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-      } else {
-        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+      try {
+        let exercisesData = [];
+  
+        if (bodyPart === 'all') {
+          exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        } else {
+          exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        }
+        setExercises(exercisesData);
+      } catch (error) {
+        console.error('Error fetching exercises:', error);
+        // Handle error: display a message to the user, or retry the request
       }
-
-      setExercises(exercisesData);
     };
-
+  
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
+  
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
