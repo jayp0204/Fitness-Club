@@ -1,6 +1,6 @@
 
 <h1>Fitness Club</h1>
-Welcome to Fitness Club, your ultimate destination for achieving your fitness goals. Our website provides a comprehensive platform to help you stay motivated, and access a wealth of resources for a healthier lifestyle.
+Welcome to Fitness Club, your ultimate destination for achieving your fitness goals. This website provides a comprehensive platform to help you stay motivated, and access a wealth of resources for a healthier lifestyle.
 <br/><br/>
 <img width="959" alt="readme 1" src="https://github.com/user-attachments/assets/0944df36-4ef2-4e23-91c5-a2369e77b926">
 <img width="557" alt="readme 2" src="https://github.com/user-attachments/assets/ed2bccf9-e049-44b0-87d4-4ddb9dc47b2e" >
